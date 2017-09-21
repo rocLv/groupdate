@@ -19,9 +19,9 @@ module Groupdate
     end
 
     def relation(column, relation)
-      if relation.default_timezone == :local
-        raise Groupdate::Error, "ActiveRecord::Base.default_timezone must be :utc to use Groupdate"
-      end
+      # if relation.default_timezone == :local
+      #  raise Groupdate::Error, "ActiveRecord::Base.default_timezone must be :utc to use Groupdate"
+      # end
 
       time_zone = self.time_zone.tzinfo.name
 
